@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>AniPet - Pagos</title>
+    <link rel="stylesheet" href="css/entrada.css">
+    <link rel="stylesheet" href="fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="imagenes/Anipet.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!--Font awesome-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <div class="menu-btn">
+         <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <a href="index.html"><img src="imagenes/Anipet.png" alt="Logo Anipet" class="nav-brand"></a>
+            <ul class="nav-menu">
+                <!--<li><a href="pagos.html"><span class="icon-users"></span>PAGOS</a></li>
+                <li><a href="servicios.html"><span class="icon-users"></span>SERVICIOS</a></li>-->
+                <li>
+                    <a href="entrada.html">TRANSACCIÓN</a>
+                </li>
+                <li>
+                    <a href="consultauser.html"></span>CONSULTA</a>
+                </li>
+            </ul>
+            <ul class="btnsesion">
+                <li>
+                    <a href="iniciosesión.html" id="logout">CERRAR SESIÓN</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <div class="atencion">
+            <div class="informacion-adic">
+                <h3>CUIDADO DE <br><br> CONFIANZA PARA <br><br> SUS MASCOTAS</h3>
+                <p>(02)6784329</p>
+                <form action="" class="solicitud" id="task-form">
+                    <p>Solicite una cita</p>
+                    <input type="text" class="input-field" placeholder="Nombre Completo" id="task-nombre">
+                    <input type="email" class="input-field" placeholder="Correo Electrónico" id="task-email">
+                    <input type="text" maxlength="10" class="input-field"  placeholder="Número de Cedula" id="task-CI">
+                    <input type="text " class="input-field-nom"  placeholder="Nombre de Mascota" id="task-nm">
+                    <select name="transporte" class="input-field-nom" id="task-especie">
+                        <option selected disabled >Especies</option>
+                        <option>Pájaro</option>
+                        <option>Gato</option>
+                        <option>Tortuga</option>
+                        <option>Conejo</option>
+                        <option>Reptil</option>
+                        <option >Perro</option>
+                        <option>Huron</option>
+                        <option >Roedor</option>
+                        <option >Otro</option>
+                        </select>
+                    <input type="text" class="input-field" placeholder="Raza" id="task-raza" >
+                    <select  class="input-field" id="task-razon">
+                        <option value="Motivo de consulta" selected disabled>Motivo de consulta</option>
+                        <option value="Vacunas">Vacunas</option>
+                        <option value="Aseo">Aseo</option>
+                        <option value="Guarderia">Guarderia</option>
+                        <option value="Cirugía">Cirudía</option>
+                        <option value="Bañera">Bañera</option>
+                        <option value="Recorte de uñas">Recorte de uñas</option>
+                        <option value="Examenes Anuales">Examenes Anuales</option>
+                        <option value="Mascota Enferma">Mascota enferma(Urgente)</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <textarea name="comentarios" rows="10" cols="40" placeholder="Nota "class="input-field" id="task-nota"></textarea>
+                    
+                    <button  type="submit" id="btn-task-form" class="btn">ENVIAR</button>
+                
+            </div>
+        </div>
+        <hr class="h">
+        <section class="social">
+            
+            <div class="links">
+                <a href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+        <hr class="h">
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--Scrool Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--Custom-->
+    <script src="scripts/efectosdeingreso.js"></script>
+    <!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCFe3u7vqeIFNn4DWr4XuHzq0hDUrKi6PI",
+            authDomain: "ani-pet.firebaseapp.com",
+            projectId: "ani-pet",
+            storageBucket: "ani-pet.appspot.com",
+            messagingSenderId: "649912783116",
+            appId: "1:649912783116:web:3a803c54f3ce1f92b9f929"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!--Custom-->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/reservarcita.js"></script>
+    <script src="scripts/comprobarSesion.js"></script>
+</body>
+</html>

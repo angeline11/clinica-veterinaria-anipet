@@ -1,0 +1,231 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	color:black;	
+	font-size: 16px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+	color: rgb(20, 20, 20);
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+.container{
+	width: 75%;
+	margin: auto;
+}
+/*NAVEGACIÓN*/
+.nav-main {
+	font-size: 12px;
+	display: flex;
+	justify-content:center;
+	align-items: center ;
+	height: 150px;
+	padding: 20px 0;
+	font-weight: bold;
+	
+}
+.btnsesion li a:hover{
+color:  rgb(0, 126, 119);
+}
+
+.nav-brand {
+	width: 150px;
+}
+/*NAV LEFT*/
+.nav-main ul{
+	display: flex;
+}
+
+.nav-main ul li{
+	padding: 20px;	
+}
+
+.nav-main ul li a{
+	padding: 4px;
+}
+.nav-main ul li a:hover{
+	border-bottom: 2px solid #afb1afa1;
+}
+
+.nav-main ul.nav-menu{
+	flex: 1;
+	justify-content: right;
+}
+.menu-btn{
+	margin:2px 0;
+	position: absolute;
+	cursor: pointer;
+	top: 10px;
+	right: 20px;
+	z-index: 2;
+	color: rgb(85, 68, 85);
+	display: none;
+}
+hr{
+	margin:20px 0;
+	border-color: #c8ccc8a1;
+}
+.btn{
+	cursor: pointer;
+	display: inline-block;
+	border:0;
+	padding: 10px 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: rgb(229, 236, 229);
+	color: rgb(114, 107, 107);
+	font-size: 12px;
+	border: 1px solidrgb(114, 107, 107);
+	margin: 10px 0;
+	
+}
+.btn:hover{
+	opacity: .7;
+}
+.btn{
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 15px;
+	padding: 10px 20px;
+    font-family: cursive;
+    font-weight: bold;
+	background: rgb(229, 236, 229);
+	color: rgb(93, 97, 93);
+	font-size: 14px;
+	border: 1px solidrgb(114, 107, 107);
+    margin: 10px 0;
+	
+}
+.atencion{
+	width: 100%;
+	display: grid;
+	font-family: sans-serif;
+	margin: 20px 0;
+    background: rgb(246, 255, 246);
+    
+}
+.pagos{
+	margin: 20px;
+	color: rgb(117, 112, 112);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	justify-content: flex-start;
+    align-items: center ;
+    font-family: cursive;
+    text-align: center;
+}
+.pagos img{
+    float: right;
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+}
+
+.pagos h2{
+    margin: 5px 0;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    font-weight: initial;
+    text-align: left;
+    color: rgb(0, 126, 119);
+}
+
+.pagos p{
+	margin: 3px 0;
+    font-size: 14px;
+    line-height: 35px;
+    color: rgb(17, 17, 17);
+    font-style: unset;
+    text-align: justify;
+	font-family: cursive;
+}
+
+
+/*social*/
+.social{
+	margin: 30px;
+}
+.social p{
+	text-align: center;
+	font-size: 15px;
+	margin-bottom: 10px;
+	color: rgb(94, 94, 94);
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.links{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.links a{
+	margin: 0 8px;
+}
+.links a i{
+	font-size: 1.5rem;
+	border-radius: 30px;
+}
+.fab {
+	color: rgb(85, 68, 85);
+}
+@media (max-width: 700px){
+	.menu-btn{
+		display: block;
+	}
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #ddfcdc;
+        height: 100%;
+        padding: 30px;
+        opacity: .9;
+        transform:translateX(-450px);	
+		transition: transform .5s ease-in-out;
+		z-index: 2;
+        }
+    .nav-brand{
+        margin: auto;
+    }
+	.nav-main ul.nav-menu.show{
+		transform: translateX(-20px);
+	}
+	.nav-main ul.nav-menu a{
+		padding: 8px;
+		font-size: 12px;
+		color:rgb(85, 68, 85);
+	}
+	
+	.news-cards{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.atencion{
+		grid-template-columns: 1fr;
+	}
+	
+}
+@media (max-width: 500px){
+	.menu-btn{
+		display: block;
+	}
+	.news-cards{
+		grid-template-columns: 1fr;
+	}
+	.news-cards img{
+		height: 270px;
+	}
+	.atencion{
+		grid-template-columns: 1fr;
+    }
+    .nav-brand{
+        margin: auto;
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <title>AniPet - Pagos</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="fonts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="imagenes/Anipet.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!--Font awesome-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <div class="container">
+        <nav class="nav-main">
+            <a href="index.html"><img src="imagenes/Anipet.png" alt="Logo Anipet" class="nav-brand"></a>
+            <ul class="nav-menu">
+                <!--<li><a href="pagos.html"><span class="icon-users"></span>PAGOS</a></li>
+                    <li><a href="servicios.html"><span class="icon-users"></span>SERVICIOS</a></li>-->
+                <li>
+                    <a href="pagos.html">PAGOS</a>
+                </li>
+                <li>
+                    <a href="sobre_nosotros.html"></span>SOBRE NOSOTROS</a>
+                </li>
+                <li>
+                    <a href="contactos.html"></span>CONTACTENOS</a>
+                </li>
+            </ul>
+
+        </nav>
+        <hr>
+        <!--Inicio de sesión-->
+        <div class="container-login">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="elegir"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Iniciar Sesión</button>
+                    <button type="button" class="toggle-btn" onclick="registro()">Registrarse</button>
+                </div>
+                <form id="login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Email" required id="login-email">
+                    <input type="password" class="input-field" placeholder="Contraseña" required id="login-password">
+                    <input type="checkbox" class="check-box"><span>Recordar Contraseña</span>
+                    <button type="submit" class="submit-btn">Ingresar</button>
+                </form>
+                <form id="registro" class="input-group">
+                    <input type="text" class="input-field" placeholder="Nombre de Usuario" required id="txtnombre">
+                    <input type="email" class="input-field" placeholder="Correo" required id="signup-email">
+                    <input type="password" class="input-field" placeholder="Contraseña" required id="signup-password">
+                    <input type="checkbox" class="check-box"><span>Acepto los Terminos y Condiciones</span>
+                    <button type="submit" class="submit-btn" id="btnRegistrar">Registrar</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <section class="social">
+            <p>Website by ULEAM</p>
+            <div class="links">
+                <a href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+        <hr>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("registro");
+        var z = document.getElementById("elegir");
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+
+        }
+        function registro() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "120px";
+        }
+
+    </script>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--Scrool Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--Custom-->
+    <script src="scripts/menu.js"></script>
+    <!--FIREBASE SCRIPTS-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCFe3u7vqeIFNn4DWr4XuHzq0hDUrKi6PI",
+            authDomain: "ani-pet.firebaseapp.com",
+            projectId: "ani-pet",
+            storageBucket: "ani-pet.appspot.com",
+            messagingSenderId: "649912783116",
+            appId: "1:649912783116:web:3a803c54f3ce1f92b9f929"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const fs=firebase.firestore();
+    </script>
+    <!--Custom-->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/comprobarSesion.js"></script>
+</body>
+
+</html>
